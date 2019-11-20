@@ -41,7 +41,11 @@ https://github.com/morningreis/Marlin-SKR-E3-Mini-1.2
 #define S_CURVE_ACCELERATION
 ```
 
+- **Configuration_adv.h** 
 
+```
+#define BABYSTEP_ZPROBE_OFFSET
+ ```
 Sensorless Homing
     SD Card Support
 
