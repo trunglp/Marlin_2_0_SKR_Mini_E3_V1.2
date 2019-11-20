@@ -6,10 +6,11 @@ Xem các tham số cần cấu hình https://github.com/bigtreetech/BIGTREETECH-
 - Pin sử dụng nguồn 5V hay 12 Volt
 ![image](https://user-images.githubusercontent.com/38026441/69205737-6a45d380-0b7d-11ea-9527-2ce40efde5fd.png)
 ![image](https://user-images.githubusercontent.com/38026441/69206396-189e4880-0b7f-11ea-8a8d-a95b45afa871.png)
-
+![image](https://user-images.githubusercontent.com/38026441/69208464-391dd100-0b86-11ea-8932-f54fedf9b405.png)
 
 
 - Cấu hình firmware
+
 
 ![SKR mini E3 1.2](https://user-images.githubusercontent.com/25599056/60634053-0aee5d80-9e40-11e9-9658-7cac8b6d1002.png)
 
