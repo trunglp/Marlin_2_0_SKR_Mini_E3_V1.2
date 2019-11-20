@@ -3,6 +3,13 @@ Config marlin 2.0 for SKR mini E3 V1.2
 
 Xem các tham số cần cấu hình https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V1.2
 
+- Pin sử dụng nguồn 5V hay 12 Volt
+![image](https://user-images.githubusercontent.com/38026441/69205737-6a45d380-0b7d-11ea-9527-2ce40efde5fd.png)
+![image](https://user-images.githubusercontent.com/38026441/69206396-189e4880-0b7f-11ea-8a8d-a95b45afa871.png)
+
+
+
+- Cấu hình firmware
 
 ![SKR mini E3 1.2](https://user-images.githubusercontent.com/25599056/60634053-0aee5d80-9e40-11e9-9658-7cac8b6d1002.png)
 
@@ -28,5 +35,3 @@ Please enable #define FAN_SOFT_PWM too, if not the fan will modify servo control
     
 ![SKR mini E3 1.2](https://user-images.githubusercontent.com/25599056/66694083-95b5e280-ece2-11e9-819b-e2ae3a710a83.png)
 
-
-![SKR mini E3 1.2]()
