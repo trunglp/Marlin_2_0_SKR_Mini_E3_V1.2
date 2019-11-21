@@ -46,6 +46,15 @@ https://github.com/morningreis/Marlin-SKR-E3-Mini-1.2
 ```
 #define BABYSTEP_ZPROBE_OFFSET
  ```
+
+- **pins_BTT_SKR_MINI_E3_V1_2.h** 
+
+![image](https://user-images.githubusercontent.com/38026441/69303653-5fa83e80-0c50-11ea-96b0-f5c408921d3f.png)
+
+```
+#define EEPROM_START_ADDRESS uint32(0x8000000 + 256 * 2048 - 2 * EEPROM_PAGE_SIZE)
+```
+
 Sensorless Homing
     SD Card Support
 
