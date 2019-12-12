@@ -4,6 +4,11 @@ https://www.reddit.com/r/ender3/comments/dojh3v/guide_for_those_upgrading_to_an_
 
 https://github.com/morningreis/Marlin-SKR-E3-Mini-1.2
 
+https://github.com/bojanpotocnik/Marlin/tree/bugfix-2.0.x_SKR-mini-E3-V1.2_BLTouch
+
+https://github.com/steenerson/Marlin_SKR_E3_Mini_12_512K
+
+
 **Cấu hình firmware SKR Mini E3** 
 
   ```
