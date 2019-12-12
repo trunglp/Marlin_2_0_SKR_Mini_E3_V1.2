@@ -39,6 +39,9 @@ https://github.com/steenerson/Marlin_SKR_E3_Mini_12_512K
 #define RESTORE_LEVELING_AFTER_G28
 #define GRID_MAX_POINTS_X 3
 #define Z_SAFE_HOMING
+
+#define NOZZLE_TO_PROBE_OFFSET {48, -2, 0  }
+#define MIN_PROBE_EDGE 25
 ```
 
 - **S-Curve Acceleration** 
