@@ -17,6 +17,8 @@ Xem các tham số cần cấu hình https://github.com/bigtreetech/BIGTREETECH-
 
 ![SKR mini E3 1.2](https://user-images.githubusercontent.com/25599056/66630670-4a92c580-ec37-11e9-9c40-2d9f095ce4af.png)
 
+![BLTouch on BTT SKR Mini E3 v1 2](https://user-images.githubusercontent.com/38026441/70702144-308d6600-1d00-11ea-9a44-005835c0d6ae.png)
+
 ![SKR mini E3 1.2](https://user-images.githubusercontent.com/25599056/66633694-fd662200-ec3d-11e9-9569-4c27f1123dc6.png)
 
 ![SKR mini E3 1.2](https://user-images.githubusercontent.com/25599056/67383650-22ee1680-f5c2-11e9-9009-8c6dc6308cf3.png)
