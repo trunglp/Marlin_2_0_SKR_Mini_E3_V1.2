@@ -7,6 +7,7 @@ Xem các tham số cần cấu hình https://github.com/bigtreetech/BIGTREETECH-
 ![image](https://user-images.githubusercontent.com/38026441/69205737-6a45d380-0b7d-11ea-9527-2ce40efde5fd.png)
 ![SKR_E3_Mini_1 2_wiring](https://user-images.githubusercontent.com/38026441/69301910-5ddb7c80-0c4a-11ea-8e6a-9f1a90fbc6e9.png)
 ![image](https://user-images.githubusercontent.com/38026441/69206396-189e4880-0b7f-11ea-8a8d-a95b45afa871.png)
+![1570702845960](https://user-images.githubusercontent.com/38026441/70765251-c8d12c80-1d8c-11ea-91d0-44c44d97a436.png)
 ![image](https://user-images.githubusercontent.com/38026441/69208464-391dd100-0b86-11ea-8932-f54fedf9b405.png)
 
 
