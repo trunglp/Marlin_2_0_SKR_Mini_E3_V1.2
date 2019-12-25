@@ -73,5 +73,5 @@ Sensorless Homing
 Features not enabled, but can be:
 
     Linear Advance
-
+    K=0.11
     M122 Command
