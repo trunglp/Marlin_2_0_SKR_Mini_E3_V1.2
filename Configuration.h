@@ -103,8 +103,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//lptrung		 
-#define SERIAL_PORT 2
+#define SERIAL_PORT -1
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -113,8 +112,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//lptrung		 
-#define SERIAL_PORT_2 -1
+#define SERIAL_PORT_2 2
 
 /**
  * This setting determines the communication speed of the printer.
@@ -136,7 +134,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "SKR-mini-E3-V1.2"
+#define CUSTOM_MACHINE_NAME "Ender-3"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -475,16 +473,15 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
-
-  //lptrung
+  // Creality Ender-3
+//lptrung		   
+ // #define DEFAULT_Kp 21.73
+ // #define DEFAULT_Ki 1.54
+ // #define DEFAULT_Kd 76.55
+//lptrung
   #define DEFAULT_Kp 16.65
   #define DEFAULT_Ki 1.02
   #define DEFAULT_Kd 67.65
-  // Creality Ender-3
-  //#define DEFAULT_Kp 21.73
-  //#define DEFAULT_Ki 1.54
-  //#define DEFAULT_Kd 76.55
-
 #endif // PIDTEMP
 
 //===========================================================================
@@ -616,8 +613,8 @@
   //#define ENDSTOPPULLUP_XMIN
   //#define ENDSTOPPULLUP_YMIN
   //#define ENDSTOPPULLUP_ZMIN
- //lptrung on			  
-#define ENDSTOPPULLUP_ZMIN_PROBE
+ //lptrung
+  #define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
 // Enable pulldown for all endstops to prevent a floating state
@@ -636,12 +633,12 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-//lptrung		 
+//lptrung
 #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-//lptrung			 
+//lptrung
 #define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
 
 /**
@@ -659,7 +656,6 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-//lptrung		 
 #define X_DRIVER_TYPE  TMC2209
 #define Y_DRIVER_TYPE  TMC2209
 #define Z_DRIVER_TYPE  TMC2209
@@ -717,8 +713,8 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-//lptrung		 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+ //lptrung
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 99.4 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -798,8 +794,7 @@
  *
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
-//lptrung on			
-#define S_CURVE_ACCELERATION
+//#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -815,7 +810,7 @@
  *
  * Enable this option for a probe connected to the Z Min endstop pin.
  */
-//lptrung on			
+//lptrung
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 /**
@@ -855,7 +850,7 @@
  * A Fix-Mounted Probe either doesn't deploy or needs manual deployment.
  *   (e.g., an inductive probe or a nozzle-based probe-switch.)
  */
-//lptrung		 
+//lptrung
 #define FIX_MOUNTED_PROBE
 
 /**
@@ -924,14 +919,16 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-//lptrung  
-#define NOZZLE_TO_PROBE_OFFSET { -40, -10, -1.85 }
+//lptrung
+#define NOZZLE_TO_PROBE_OFFSET {48, -2, -1.75  }
 
 // Certain types of probes need to stay away from edges
-#define MIN_PROBE_EDGE 10
+//lptrung
+#define MIN_PROBE_EDGE 35
 
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 8000
+//lptrung
+#define XY_PROBE_SPEED 10000 //8000
 
 // Feedrate (mm/m) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -948,7 +945,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
+//lptrung
+//#define MULTIPLE_PROBING 1
 //#define EXTRA_PROBING    1
 
 /**
@@ -1168,7 +1166,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//lptrung								  
+//lptrung
 #define AUTO_BED_LEVELING_BILINEAR
 //#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
@@ -1177,7 +1175,6 @@
  * Normally G28 leaves leveling disabled on completion. Enable
  * this option to have G28 restore the prior leveling state.
  */
-//lptrung								  
 #define RESTORE_LEVELING_AFTER_G28
 
 /**
@@ -1216,8 +1213,8 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  //lptrung 							 
-  #define GRID_MAX_POINTS_X 5
+ //lptrung
+  #define GRID_MAX_POINTS_X 3
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -1277,6 +1274,7 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
+ //lptrung
 #define LCD_BED_LEVELING
 
 #if ENABLED(LCD_BED_LEVELING)
@@ -1322,7 +1320,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//lptrung on					 
+//lptrung
 #define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
@@ -1330,9 +1328,9 @@
   #define Z_SAFE_HOMING_Y_POINT ((Y_BED_SIZE) / 2)    // Y point for Z homing when homing all axes (G28).
 #endif
 
+//lptrung
 // Homing speeds (mm/m)
-//lptrung nhien cuu								  
-#define HOMING_FEEDRATE_XY (20*60)
+#define HOMING_FEEDRATE_XY (20*100)
 #define HOMING_FEEDRATE_Z  (4*60)
 
 // Validate that endstops are triggered on homing moves
@@ -1414,6 +1412,7 @@
 //#define DISABLE_M503        // Saves ~2700 bytes of PROGMEM. Disable for release!
 #define EEPROM_CHITCHAT       // Give feedback on EEPROM commands. Disable to save PROGMEM.
 #if ENABLED(EEPROM_SETTINGS)
+  //lptrung off
   #define EEPROM_AUTO_INIT  // Init EEPROM automatically on any errors.
 #endif
 
@@ -1445,7 +1444,7 @@
 // @section temperature
 
 // Preheat Constants
-//lptrung								   
+//lptrung
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 200
 #define PREHEAT_1_TEMP_BED     60
@@ -1716,7 +1715,6 @@
 // If you have a speaker that can produce tones, enable it here.
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
-//lptrung off				 
 //#define SPEAKER
 
 //
@@ -1959,7 +1957,6 @@
 // This is RAMPS-compatible using a single 10-pin connector.
 // (For CR-10 owners who want to replace the Melzi Creality board but retain the display)
 //
-//lptrung						 
 #define CR10_STOCKDISPLAY
 
 //
@@ -2097,7 +2094,8 @@
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-//#define FAN_SOFT_PWM
+//lptrung
+#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
