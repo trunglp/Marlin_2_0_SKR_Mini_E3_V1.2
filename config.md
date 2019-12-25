@@ -46,6 +46,7 @@ https://github.com/steenerson/Marlin_SKR_E3_Mini_12_512K
 
 - **S-Curve Acceleration** 
 ```
+Tắt tính năng này vì sợ đụng độ  Linear Advance
 #define S_CURVE_ACCELERATION
 ```
 
