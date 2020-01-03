@@ -64,6 +64,27 @@ Tắt tính năng này vì sợ đụng độ  Linear Advance
 #define EEPROM_START_ADDRESS uint32(0x8000000 + 256 * 2048 - 2 * EEPROM_PAGE_SIZE)
 ```
 
+Fix EEPROM :
+- Không được lưu quá 224K
+Có thể lưu eeprom trong thẻ nhớ
+Mở file Marlin/src/pins/stm32/pins_BTT_SKR_MINI_E3_V1_2.h
+```
+//#define FLASH_EEPROM_EMULATION
+//#define EEPROM_PAGE_SIZE     uint16(0x800) // 2KB
+//#define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 1024 - 2 * EEPROM_PAGE_SIZE)
+//#undef E2END
+//#define E2END                (EEPROM_PAGE_SIZE - 1) // 2KB
+
+and add the following:
+// This is a total hack
+#warning "Enabling dburr's SD_EEPROM_EMULATION hack"
+#define SD_EEPROM_EMULATION
+
+```
+Then recompile and reinstall.
+Disable EEPROM support entirely. In Configuration.h, comment out the #define EEPROM_SETTINGS, recompile and reinstall. This means that you won't be able to use M500 to store settings (such as probe offset, feed rates, etc.) You'll 
+Tham khảo https://www.reddit.com/r/BIGTREETECH/comments/djlivd/unresponsive_board_skr_mini_e3_v12/
+
 Sensorless Homing
     SD Card Support
 
