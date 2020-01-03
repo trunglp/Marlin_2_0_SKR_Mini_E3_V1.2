@@ -71,6 +71,9 @@ Có thể lưu eeprom trong thẻ nhớ
 ```
 Commenting PRINTCOUNTER also fixes the issue for me. Since replacing #define PRINTCOUNTER with //#define PRINTCOUNTER, I can make changes to at least Z OFFSET and extruder esteps using M92 (haven't tried anything else). Saving with M500 makes these settings persistent across at least 10 power cycles so far. This is reproducible. PRINTCOUNTER is corrupting the EEPROM storage. As stated by @brew99 the issue with PRINTCOUNTER has been raised in the marlin repo at least twice that I have found so far. The issues have been closed with no fix only workarounds. Note: using the eeprom.dat file on the SD card by commenting out FLASH_EEPROM_EMULATION is also another suitable workaround. I have no need for print stats so for me at least commenting PRINTCOUNTER is more elegant.
 
+Just connect to the printer and use G-code M503 S0 to output settings in a format that's easy to copy-paste for restoring the settings after flashing new firmware. That makes flashing new versions a lot less hassle.
+
+
 ```
 
 
