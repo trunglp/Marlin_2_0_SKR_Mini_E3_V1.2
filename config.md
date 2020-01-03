@@ -67,25 +67,12 @@ Tắt tính năng này vì sợ đụng độ  Linear Advance
 Fix EEPROM :
 - Không được lưu quá 224K
 Có thể lưu eeprom trong thẻ nhớ
-Mở file Marlin/src/pins/stm32/pins_BTT_SKR_MINI_E3_V1_2.h
-```
-//#define FLASH_EEPROM_EMULATION
-//#define EEPROM_PAGE_SIZE     uint16(0x800) // 2KB
-//#define EEPROM_START_ADDRESS uint32(0x8000000 + (STM32_FLASH_SIZE) * 1024 - 2 * EEPROM_PAGE_SIZE)
-//#undef E2END
-//#define E2END                (EEPROM_PAGE_SIZE - 1) // 2KB
 
-and add the following:
-// This is a total hack
-#warning "Enabling dburr's SD_EEPROM_EMULATION hack"
-#define SD_EEPROM_EMULATION
-
-IN File configuration.h
-//#define EEPROM_SETTINGS
 ```
-Then recompile and reinstall.
-Disable EEPROM support entirely. In Configuration.h, comment out the #define EEPROM_SETTINGS, recompile and reinstall. This means that you won't be able to use M500 to store settings (such as probe offset, feed rates, etc.) You'll 
-Tham khảo https://www.reddit.com/r/BIGTREETECH/comments/djlivd/unresponsive_board_skr_mini_e3_v12/
+Commenting PRINTCOUNTER also fixes the issue for me. Since replacing #define PRINTCOUNTER with //#define PRINTCOUNTER, I can make changes to at least Z OFFSET and extruder esteps using M92 (haven't tried anything else). Saving with M500 makes these settings persistent across at least 10 power cycles so far. This is reproducible. PRINTCOUNTER is corrupting the EEPROM storage. As stated by @brew99 the issue with PRINTCOUNTER has been raised in the marlin repo at least twice that I have found so far. The issues have been closed with no fix only workarounds. Note: using the eeprom.dat file on the SD card by commenting out FLASH_EEPROM_EMULATION is also another suitable workaround. I have no need for print stats so for me at least commenting PRINTCOUNTER is more elegant.
+
+```
+
 
 Sensorless Homing
     SD Card Support
