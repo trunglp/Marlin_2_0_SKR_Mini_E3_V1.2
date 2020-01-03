@@ -10,6 +10,9 @@ https://github.com/steenerson/Marlin_SKR_E3_Mini_12_512K
 
 https://github.com/fluppie/BIGTREETECH-SKR-mini-E3/tree/master/firmware/V1.2
 
+https://github.com/christran206/Marlin2.0-SKR-Mini-E3-1.2
+
+
 **Cấu hình firmware SKR Mini E3** 
 
   ```
