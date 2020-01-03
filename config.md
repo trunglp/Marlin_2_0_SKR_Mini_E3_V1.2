@@ -80,6 +80,8 @@ and add the following:
 #warning "Enabling dburr's SD_EEPROM_EMULATION hack"
 #define SD_EEPROM_EMULATION
 
+IN File configuration.h
+//#define EEPROM_SETTINGS
 ```
 Then recompile and reinstall.
 Disable EEPROM support entirely. In Configuration.h, comment out the #define EEPROM_SETTINGS, recompile and reinstall. This means that you won't be able to use M500 to store settings (such as probe offset, feed rates, etc.) You'll 
