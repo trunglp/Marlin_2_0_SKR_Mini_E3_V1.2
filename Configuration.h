@@ -413,6 +413,7 @@
 #define TEMP_SENSOR_4 0
 #define TEMP_SENSOR_5 0
 #define TEMP_SENSOR_BED 1
+//#define BED_MAXTEMP 125 (Mine is set to 65 for a magnetic bed surface that works to max. 70 °C)
 #define TEMP_SENSOR_CHAMBER 0
 
 // Dummy thermistor constant temperature readings, for use with 998 and 999
