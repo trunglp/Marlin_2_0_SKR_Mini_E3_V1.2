@@ -1,4 +1,4 @@
-
+# Cấu hình 
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 #define ENDSTOPPULLUP_ZMIN_PROBE
