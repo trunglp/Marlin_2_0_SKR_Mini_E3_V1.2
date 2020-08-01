@@ -1,4 +1,15 @@
 # Cấu hình 
+
+```M92 X80.00 Y80.00 Z400.00 E95.50
+M203 X500.00 Y500.00 Z20.00 E120.00
+M201 X500.00 Y500.00 Z100.00 E5000.00
+M204 P500.00 R500.00 T500.00
+Recv: echo:; Advanced: B<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_x_jerk> Y<max_y_jerk> Z<max_z_jerk> E<max_e_jerk>
+M205 B20000.00 S0.00 T0.00 X10.00 Y10.00 Z0.30 E15.00
+M145 S0 H200 B60 F0
+M851 X48.00 Y-2.00 Z-0.8
+M603 L20.00 U100.00
+```
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 #define ENDSTOPPULLUP_ZMIN_PROBE
