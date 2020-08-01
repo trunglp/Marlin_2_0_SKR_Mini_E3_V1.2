@@ -10,6 +10,21 @@ M145 S0 H200 B60 F0
 M851 X48.00 Y-2.00 Z-0.8
 M603 L20.00 U100.00
 ```
+
+```
+Fix
+
+Hello, please confirm “tone.cpp” file in “C:\Users\Administrator.platformio\packages\framework-arduinoststm32-maple\STM32F1\cores\maple” folder is set correctly. If not, please modify it manually and then compile the test.
+What needs to be changed is line 34
+should be change from
+
+    #define TONE_CHANNEL 8
+to
+
+    #define TONE_CHANNEL 4
+```
+    
+    
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 #define ENDSTOPPULLUP_ZMIN_PROBE
