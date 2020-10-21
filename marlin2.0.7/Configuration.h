@@ -828,7 +828,7 @@
  * See https://github.com/synthetos/TinyG/wiki/Jerk-Controlled-Motion-Explained
  */
 //lptrung		   
-//#define S_CURVE_ACCELERATION
+#define S_CURVE_ACCELERATION
 
 //===========================================================================
 //============================= Z Probe Options =============================
@@ -991,7 +991,7 @@
  *     O-- FRONT --+
  */
 //lptrung
-#define NOZZLE_TO_PROBE_OFFSET { -43.3, -6.38, -0.8 }
+#define NOZZLE_TO_PROBE_OFFSET { -43.3, -6.38, -0.975 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -2324,7 +2324,7 @@
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
 //lptrung																 
-#define FAN_SOFT_PWM
+//#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
