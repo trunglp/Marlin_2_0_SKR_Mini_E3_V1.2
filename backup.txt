@@ -1,0 +1,30 @@
+###########################################
+target='target /'
+filename=`date +%d_%m_%y`
+
+
+echo '>>>Start backup at '>>/home/backup/data/level0_$filename.log
+date>>/home/backup/data/level0_$filename.log
+
+rcvcat='nocatalog'
+cmdfile=/home/backup/scripts/level0.rcv
+
+$ORACLE_HOME/bin/rman $target $rcvcat cmdfile $cmdfile>>/home/backup/data/level0_$filename.log
+echo '>>>Backup finished at '>>/home/backup/data/level0_$filename.log
+date>>/home/backup/data/level0_$filename.log
+
+bash-3.2$ cat /home/backup/scripts/level0.rcv
+RUN
+{
+allocate channel t1 type disk;
+allocate channel t2 type disk;
+allocate channel t3 type disk;
+BACKUP AS COMPRESSED BACKUPSET format '/home/backup/data/%d_%D_%M_%Y_%s_%p.bk' INCREMENTAL LEVEL 0 DATABASE FILESPERSET 4;
+BACKUP AS COMPRESSED BACKUPSET format '/home/backup/data/%d_%D_%M_%Y_%s_%p.ar' ARCHIVELOG ALL DELETE INPUT;
+BACKUP CURRENT CONTROLFILE;
+DELETE noprompt OBSOLETE;
+release channel t1;
+release channel t2;
+release channel t3;
+
+}
