@@ -741,7 +741,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
 //lptrung				
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.0, 80.0, 80.0, 98 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.0, 80.0, 80.0, 350 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -998,7 +998,7 @@
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 //lptrung			
-#define PROBING_MARGIN 40
+#define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_SPEED 10000 //(133*60)
@@ -1046,8 +1046,9 @@
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN -20
-#define Z_PROBE_OFFSET_RANGE_MAX 20
+// lptrung edit 
+#define Z_PROBE_OFFSET_RANGE_MIN -5
+#define Z_PROBE_OFFSET_RANGE_MAX 5
 
 // Enable the M48 repeatability test to test probe accuracy
 //lptrung						
@@ -1532,7 +1533,7 @@
 //lptrung 
 #define PREHEAT_1_LABEL       "PLA"
 #define PREHEAT_1_TEMP_HOTEND 200
-#define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_TEMP_BED     65
 #define PREHEAT_1_FAN_SPEED   0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "PETG"
